@@ -5,9 +5,7 @@ from datetime import datetime
 from flask import Flask, request, render_template
 from pathlib import Path
 
-# this is where the change will go
-# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1!
-app = Flask(__name__)
+app = Flask(__name__,static_url_path='/static')
 
 # Read image features
 fe = FeatureExtractor()
@@ -34,8 +32,7 @@ def index():
         dists = np.linalg.norm(features-query, axis=1)  # L2 distances to features
         ids = np.argsort(dists)[:30]  # Top 30 results
         scores = [(dists[id], img_paths[id]) for id in ids]
-
-        return render_template('index.html',
+        return render_template('indexTest.html',
                                query_path=uploaded_img_path,
                                scores=scores)
     else:
@@ -43,4 +40,4 @@ def index():
 
 
 if __name__=="__main__":
-    app.run("0.0.0.0")
+    app.run()

@@ -1,3 +1,6 @@
 Pillow
 Flask
 tensorflow>=2.0.0
+
+
+--> runned the offline.py

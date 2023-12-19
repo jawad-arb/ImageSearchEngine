@@ -1,5 +1,1 @@
-
-
-if __name__ == '__main__':
-    import tensorflow as tf
-    tf.__version__
+from tensorflow.keras.preprocessing import image
