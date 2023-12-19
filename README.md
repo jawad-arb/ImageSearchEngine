@@ -23,7 +23,7 @@ This project is an ImageSearchEngine designed for an e-commerce website. It allo
 1. **Clone the Repository**
 
     ```bash
-    git clone https://github.com/yourusername/ImageSearchEngine.git
+    git clone https://github.com/jawad-arb/ImageSearchEngine.git
     cd ImageSearchEngine
     ```
 
