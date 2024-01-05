@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        #imageList {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        #imageList li {
+            flex: 0 0 calc(33.33% - 20px);
+            max-width: calc(33.33% - 20px);
+        }
+
+        #imageList img {
+            width: auto;
+            height: 200px; /* Set your desired fixed height here */
+            display: block;
+            object-fit: cover; /* This property maintains the aspect ratio */
+            max-width: 100%; /* Ensure the image doesn't exceed its container */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>All Products</h1>
+
+    <ul id="imageList">
+        {% for img_path in img_paths %}
+            <li><img src="{{ img_path }}" alt="Product Image"></li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
